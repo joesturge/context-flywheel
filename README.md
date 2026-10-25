@@ -30,14 +30,10 @@ In GitHub Copilot CLI, invoke the skill when finishing a task or when repository
 /context-flywheel [optional additional context]
 ```
 
-The skill checks whether the insight is durable and worth keeping, verifies it against relevant repository evidence where practical, and looks for conflicting or stale guidance. When justified, it edits the narrowest suitable existing documentation or AI guidance. It treats unverified claims as uncertain, avoids generic advice and one-off mistakes, and does not require a fixed number of occurrences. The Rule of Three is a pragmatic signal, not an enforced threshold.
+The skill checks whether the insight is durable and worth keeping, verifies it against relevant repository evidence where practical, and looks for conflicting or stale guidance. When justified, it edits the narrowest suitable existing documentation or AI guidance. It treats unverified claims as uncertain, avoids generic advice and one-off mistakes.
 
 The marketplace commands and invocation shown here are for GitHub Copilot CLI. The technique can inform work with other AI tools, but compatible skill formats, file locations, discovery, and loading behavior vary; this repository does not promise the same plugin installation or invocation across tools.
 
 ## Developer control
 
 The skill runs when invoked; it does not monitor work or capture context automatically. Any edits stay reviewable in the working tree. The developer decides whether to amend, keep, discard, or commit them; the skill does not stage, commit, or push changes. This is a low-maintenance practice, not a replacement for human review or occasional upkeep.
-
-## Manual evaluation
-
-In a disposable repository, try the skill with (1) a durable finding supported by source or tests, (2) a one-off or generic observation, (3) an uncertain finding or a conflict with existing guidance, and (4) no useful insight. Expect a targeted update only when evidence supports one, uncertainty or conflicts to be reported rather than asserted, and no edit when nothing merits retention. Include an unrelated pre-existing change and a path-scoped rule to check that unrelated work is preserved and the rule is limited to matching files. Confirm the skill leaves all edits for developer review and does not stage, commit, or push. This project has no automated behavioral test suite.
