@@ -5,7 +5,8 @@ A lightweight GitHub Copilot plugin with one skill for capturing durable reposit
 ## Install
 
 ```sh
-gh copilot plugin install joesturge/context-flywheel
+gh copilot -- plugin marketplace add joesturge/context-flywheel
+gh copilot -- plugin install context-flywheel@context-flywheel-marketplace
 ```
 
 ## How it works
