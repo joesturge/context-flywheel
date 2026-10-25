@@ -1,14 +1,13 @@
 {
-  "name": "instruction-architect",
-  "description": "Teaches the current Copilot session how to improve repository instructions, skills, prompts, agents and supporting documentation with minimal plugin code.",
+  "name": "context-flywheel",
+  "description": "A single skill for capturing durable repository knowledge and keeping documentation and AI guidance aligned.",
   "version": "0.1.0",
   "author": {
-    "name": "Joe Sturge",
+    "name": "joesturge",
     "url": "https://github.com/joesturge"
   },
-  "repository": "https://github.com/joesturge/copilot-instruction-architect",
+  "repository": "https://github.com/joesturge/context-flywheel",
   "license": "MIT",
-  "keywords": ["copilot", "instructions", "ai-config", "optimisation"],
-  "skills": ["skills/"],
-  "hooks": "hooks.json"
+  "keywords": ["copilot", "context", "skills", "documentation"],
+  "skills": ["skills/context-flywheel/"]
 }

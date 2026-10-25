@@ -1,17 +1,17 @@
 {
-  "name": "instruction-architect-marketplace",
+  "name": "context-flywheel-marketplace",
   "owner": {
     "name": "Joe Sturge",
     "email": "joe@joesturge.com"
   },
   "metadata": {
-    "description": "Marketplace for the Instruction Architect GitHub Copilot CLI plugin.",
+    "description": "Marketplace for The Context Flywheel GitHub Copilot plugin.",
     "version": "0.1.0"
   },
   "plugins": [
     {
-      "name": "instruction-architect",
-      "description": "Teaches Copilot how to improve a repository's AI-development configuration using the current conversation and repository tools.",
+      "name": "context-flywheel",
+      "description": "Captures durable repository knowledge and keeps documentation and AI guidance aligned.",
       "version": "0.1.0",
       "source": "."
     }
