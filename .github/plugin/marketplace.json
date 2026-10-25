@@ -11,7 +11,7 @@
   "plugins": [
     {
       "name": "context-flywheel",
-      "description": "Captures durable repository knowledge and keeps documentation and AI guidance aligned.",
+      "description": "A lightweight skill for identifying and incrementally capturing durable repository knowledge in project documentation or AI guidance.",
       "version": "0.1.0",
       "source": "."
     }

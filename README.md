@@ -1,41 +1,43 @@
 # The Context Flywheel
 
-A lightweight GitHub Copilot plugin with one skill for capturing durable repository knowledge and keeping documentation and AI guidance focused and up to date.
+A lightweight GitHub Copilot CLI plugin with one skill for capturing useful repository knowledge as development reveals it. It favors focused, incremental updates over exhaustive upfront documentation.
 
 [Read the blog post: The Context Flywheel — A Cheap and Simple Technique for Pragmatic AI Development](https://dev.joesturge.com/p/the-context-flywheel-a-cheap-and-simple-technique-for-pragmatic-ai-development/)
 
 ## Install
+
+Install the plugin from this repository's marketplace with the GitHub Copilot CLI:
 
 ```sh
 gh copilot -- plugin marketplace add joesturge/context-flywheel
 gh copilot -- plugin install context-flywheel@context-flywheel-marketplace
 ```
 
-<details>
-<summary>Install the skill manually without the plugin</summary>
+The `gh copilot` commands launch the Copilot CLI; its availability and plugin support are required. These instructions have been checked against the CLI's command help, but the installation itself has not been run.
 
-Copy `skills/context-flywheel/SKILL.md` into your repository at `.github/skills/context-flywheel/SKILL.md`.
+<details>
+<summary>Install the skill manually</summary>
+
+Copy `skills/context-flywheel/SKILL.md` from this repository into your project at `.github/skills/context-flywheel/SKILL.md`. In an active Copilot CLI session, run `/skills reload` to reload it. [GitHub Copilot agent skills](https://docs.github.com/en/copilot/concepts/customizations/agent-skills) are also supported in the Copilot app, cloud agent, VS Code, Visual Studio, and JetBrains, subject to product versions. Check the target surface's instructions because skill locations and setup can differ.
 
 </details>
 
-## How it works
+## Use
 
-Invoke the **Context Flywheel** skill when wrapping up a task or when a non-obvious repository pattern, recurring edge case, or documentation gap becomes clear. The skill reviews the current conversation, relevant repository changes, and existing documentation.
-
-### Usage
-
-In Copilot Chat, you can invoke the skill using the following:
+In GitHub Copilot CLI, invoke the skill when finishing a task or when repository friction reveals a potentially useful pattern:
 
 ```text
-/context-flywheel [optional additional information]
+/context-flywheel [optional additional context]
 ```
 
-It filters out generic advice, standard technology facts, and one-off fixes. For durable knowledge, it chooses the narrowest suitable home: path-scoped instructions, concise global Copilot instructions, another skill, a prompt, an agent when a distinct persona or tool boundary is useful, or project documentation for human contributors. It also checks whether relevant documentation is inaccurate or missing useful knowledge.
+The skill checks whether the insight is durable and worth keeping, verifies it against relevant repository evidence where practical, and looks for conflicting or stale guidance. When justified, it edits the narrowest suitable existing documentation or AI guidance. It treats unverified claims as uncertain, avoids generic advice and one-off mistakes, and does not require a fixed number of occurrences. The Rule of Three is a pragmatic signal, not an enforced threshold.
 
-When an update is clear and low-risk, the skill edits the relevant workspace files and summarizes what changed and why. If the right update or destination is uncertain, it describes the insight and recommends an edit instead.
+The marketplace commands and invocation shown here are for GitHub Copilot CLI. The technique can inform work with other AI tools, but compatible skill formats, file locations, discovery, and loading behavior vary; this repository does not promise the same plugin installation or invocation across tools.
 
-## You stay in control
+## Developer control
 
-The skill helps identify and place useful knowledge; it does not decide what deserves to become a permanent rule. Review its workspace changes, keep what adds value, and revise or discard anything that does not. Commit useful documentation and guidance alongside the related work.
+The skill runs when invoked; it does not monitor work or capture context automatically. Any edits stay reviewable in the working tree. The developer decides whether to amend, keep, discard, or commit them; the skill does not stage, commit, or push changes. This is a low-maintenance practice, not a replacement for human review or occasional upkeep.
 
-The Rule of Three can be a useful personal signal for deciding when a pattern is worth capturing, but it is not a threshold enforced by the skill. Use your judgement: some knowledge is worth recording immediately, while other observations may never need a permanent change.
+## Manual evaluation
+
+In a disposable repository, try the skill with (1) a durable finding supported by source or tests, (2) a one-off or generic observation, (3) an uncertain finding or a conflict with existing guidance, and (4) no useful insight. Expect a targeted update only when evidence supports one, uncertainty or conflicts to be reported rather than asserted, and no edit when nothing merits retention. Include an unrelated pre-existing change and a path-scoped rule to check that unrelated work is preserved and the rule is limited to matching files. Confirm the skill leaves all edits for developer review and does not stage, commit, or push. This project has no automated behavioral test suite.
