@@ -2,6 +2,8 @@
 
 A lightweight GitHub Copilot plugin with one skill for capturing durable repository knowledge and keeping documentation and AI guidance focused and up to date.
 
+[Read the blog post: The Context Flywheel — A Cheap and Simple Technique for Pragmatic AI Development](https://dev.joesturge.com/p/the-context-flywheel-a-cheap-and-simple-technique-for-pragmatic-ai-development/)
+
 ## Install
 
 ```sh
