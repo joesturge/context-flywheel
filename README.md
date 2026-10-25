@@ -2,7 +2,7 @@
 
 A lightweight GitHub Copilot CLI plugin with one skill for capturing useful repository knowledge as development reveals it. It favors focused, incremental updates over exhaustive upfront documentation.
 
-[Read the blog post: The Context Flywheel — A Cheap and Simple Technique for Pragmatic AI Development](https://dev.joesturge.com/p/the-context-flywheel-a-cheap-and-simple-technique-for-pragmatic-ai-development/)
+[Read the blog post: The Context Flywheel: A Pragmatic Approach to Context Engineering](https://dev.joesturge.com/p/the-context-flywheel-a-pragmatic-approach-to-context-engineering/)
 
 ## Install
 
