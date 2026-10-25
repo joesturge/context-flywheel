@@ -11,9 +11,24 @@ gh copilot -- plugin marketplace add joesturge/context-flywheel
 gh copilot -- plugin install context-flywheel@context-flywheel-marketplace
 ```
 
+<details>
+<summary>Install the skill manually without the plugin</summary>
+
+Copy `skills/context-flywheel/SKILL.md` into your repository at `.github/skills/context-flywheel/SKILL.md`.
+
+</details>
+
 ## How it works
 
 Invoke the **Context Flywheel** skill when wrapping up a task or when a non-obvious repository pattern, recurring edge case, or documentation gap becomes clear. The skill reviews the current conversation, relevant repository changes, and existing documentation.
+
+### Usage
+
+In Copilot Chat, you can invoke the skill using the following:
+
+```text
+/context-flywheel [optional additional information]
+```
 
 It filters out generic advice, standard technology facts, and one-off fixes. For durable knowledge, it chooses the narrowest suitable home: path-scoped instructions, concise global Copilot instructions, another skill, a prompt, an agent when a distinct persona or tool boundary is useful, or project documentation for human contributors. It also checks whether relevant documentation is inaccurate or missing useful knowledge.
 
