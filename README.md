@@ -13,7 +13,7 @@ gh copilot -- plugin marketplace add joesturge/context-flywheel
 gh copilot -- plugin install context-flywheel@context-flywheel-marketplace
 ```
 
-The `gh copilot` commands launch the Copilot CLI; its availability and plugin support are required. These instructions have been checked against the CLI's command help, but the installation itself has not been run.
+The `gh copilot` commands launch the Copilot CLI; its availability and plugin support are required.
 
 <details>
 <summary>Install the skill manually</summary>
